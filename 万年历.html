@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+    <script language=vbs>
+	  dim a(12),y,k,m,x,sum,w
+	    a(1)=31:a(3)=31:a(4)=30:a(5)=31:a(6)=30
+		   a(7)=31:a(8)=31:a(9)=30:a(10)=31:a(11)=30
+		   a(12)=31   
+	  sub sub1()
+        document.write(w)
+	    document.write(y&"年"&x&"月"&"<br><br>")
+		document.write("<table border=1>")
+		document.write("<tr>")
+		document.write("<td>Sun</td><td>Mon</td><td>Tue</td><td>Wen</td><td>Thu</td><td>Fir</td><td>Sat</td>")
+		document.write("<tr>")
+		   for i=1 to m
+		   document.write("<td></td>")
+		   next
+		   for i=(m+1) to a(x)+m
+		   document.write("<td>"& i-m &"</td>")
+		   if (i mod 7)=0 then 
+		   document.write("<tr>")
+		   end if 
+		   next
+        document.write("</table>")
+	  end sub
+	  sub b1_onclick()
+	       y=t1.value
+	    if((y mod 400)=0)or((y mod 4)=0 and (y mod 100)<>0) then
+		     a(2)=29
+		   else
+			 a(2)=28
+		   end if 
+		   
+		   x=t2.value
+		   m=(y-1+fix((y-1)/4)-fix((y-1)/100)+fix((y-1)/400)+1) mod 7
+           for j=2 to (x)
+            sum=a(j-1)+sum
+			next
+			m=(sum+m) mod 7
+	    call sub1()
+	  end sub
+	</script>
+ <body>
+    请输入年份：<input type="text" id="t1">年<input type="text" id="t2">月
+	<input type="button" value="确定" id=b1><br><br>
+	 
+ </body>
+</html>

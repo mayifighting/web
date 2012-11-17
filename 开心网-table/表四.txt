@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>开心网
+</title>
+</head>
+<body>
+<table style="width:100%;height:100%;">
+      <tr>
+          <td style="width:100%;height:7%;background-color:#ff0000;">
+          </td>
+      </tr>
+      <tr>
+          <td style="width:100%;height:80%;">
+          </td>
+      </tr>
+      <tr>
+          <td style="width:100%;height:13%;">
+              <hr style="height:90%;width:90%;">
+              <font size=2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp关于我们&nbsp手机中心&nbsp开放平台&nbsp应用中心&nbsp自助广告&nbsp开心招聘&nbsp客服&nbsp帮助</font>
+          </td>
+      </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>计时器
+</title>
+</head>
+<body>
+ <center>
+  <input type="button" id="b1" value="0" style="font-size:2cm">
+  <input type="button" id="b2" value="0" style="font-size:2cm">
+  <input type="button" id="b3" value="0" style="font-size:2cm"><br>
+  <input type="button" id="t2" value="试试运气吧！"  style="font-size:1cm"><br>
+  <input type="button" id="t1" value="开始"  style="font-size:1cm">
+ </center>
+ <script language=vbs>
+  dim n1,n2,n3,sd1
+   randomize
+   sub s1() 
+    n1=fix(rnd*10)
+    b1.value=n1
+    n2=fix(rnd*10)
+    b2.value=n2
+    n3=fix(rnd*10)
+    b3.value=n3
+   end sub
+   sub s2()
+    sd1=setinterval ("s1()",1)
+   end sub
+   sub s3()
+     clearinterval(sd1)
+   end sub
+   sub t1_onclick()
+    if t1.value="开始" then
+     t1.value="暂停"
+     call s2()
+    else 
+      t1.value="开始"
+      call s3()
+      call s4()
+     end if
+   end sub
+   sub s4()
+    if b1.value<>7 and b2.value<>7 and b3.value<>7 then
+      t2.value="祝您下次中奖"
+    elseif b1.value=7 and b2.value=7 and b3.value=7 then
+      t2.value="一等奖"
+    elseif (b1.value=7 and b2.value<>7 and b3.value<>7) or (b1.value<>7 and b2.value=7 and b3.value<>7) or (b1.value<>7 and b2.value<>7 and b3.value=7) then
+      t2.value="三等奖"
+    else
+      t2.value="二等奖"
+    end if
+   end sub
+ </script>
+</body>
+</html>
